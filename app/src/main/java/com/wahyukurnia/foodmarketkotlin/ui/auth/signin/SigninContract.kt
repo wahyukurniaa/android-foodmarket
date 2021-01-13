@@ -11,6 +11,6 @@ interface SigninContract {
     }
     interface Presenter :SigninContract , BasePresenter {
         fun submitLogin(email:String, password:String)
-        //
+        
     }
 }
