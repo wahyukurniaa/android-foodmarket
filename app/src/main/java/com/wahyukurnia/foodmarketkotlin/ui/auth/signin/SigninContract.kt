@@ -10,6 +10,7 @@ interface SigninContract {
         fun onLoginFailed(message:String)
     }
     //interface presenter for signin presenter
+    //interface presenter for sign in presenter kedua
     interface Presenter :SigninContract , BasePresenter {
         fun submitLogin(email:String, password:String)
     }
