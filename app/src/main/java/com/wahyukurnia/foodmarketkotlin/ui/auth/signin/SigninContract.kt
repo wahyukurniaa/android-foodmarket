@@ -9,8 +9,8 @@ interface SigninContract {
         fun onLoginSuccess(loginResponse: LoginResponse)
         fun onLoginFailed(message:String)
     }
+    //interface presenter for signin presenter
     interface Presenter :SigninContract , BasePresenter {
         fun submitLogin(email:String, password:String)
-        
     }
 }
