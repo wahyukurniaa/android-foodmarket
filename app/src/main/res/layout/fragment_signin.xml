@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="26dp"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:context=".ui.auth.signin.SigninFragment">
+
+    <TextView
+        style="@style/TextView.PoppinsNormal16sp020202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Address" />
+    <EditText
+        style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ic_shape_rectangle_outline_8_020202"
+        android:hint="Type your email address"
+        android:padding="10dp" />
+
+    <TextView
+        style="@style/TextView.PoppinsNormal16sp020202"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password" />
+    <EditText
+        android:inputType="textPassword"
+        style="@style/EditText.PoppinsNormal14sp8D92A3"
+        android:layout_marginTop="6dp"
+        android:padding="10dp"
+        android:background="@drawable/ic_shape_rectangle_outline_8_020202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your password"
+        />
+
+    <Button
+        android:id="@+id/btnSignin"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Sign In"
+        style="@style/Button.Primary"
+        />
+    <Button
+        android:id="@+id/btnSignup"
+        android:textAllCaps="false"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create new Account"
+        style="@style/Button.Secondary"
+        />
+
+</LinearLayout>

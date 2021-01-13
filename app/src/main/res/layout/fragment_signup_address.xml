@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.auth.signin.SigninFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="26dp"
+        android:background="#FFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="16dp"
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone No" />
+        <EditText
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/ic_shape_rectangle_outline_8_020202"
+            android:hint="Type your phone number"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_marginTop="16sp"
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address" />
+        <EditText
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/ic_shape_rectangle_outline_8_020202"
+            android:hint="Type your address"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="House No" />
+        <EditText
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
+            android:background="@drawable/ic_shape_rectangle_outline_8_020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your house number"
+            />
+
+        <TextView
+            style="@style/TextView.PoppinsNormal16sp020202"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City" />
+        <EditText
+            style="@style/EditText.PoppinsNormal14sp8D92A3"
+            android:layout_marginTop="6dp"
+            android:padding="10dp"
+            android:background="@drawable/ic_shape_rectangle_outline_8_020202"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your city number"
+            />
+
+        <Button
+            android:id="@+id/btnSignUpNow"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Sign up Now"
+            style="@style/Button.Primary"
+            />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
