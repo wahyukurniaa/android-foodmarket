@@ -19,23 +19,23 @@ class FoodMarket :MultiDexApplication(){
         instance = this
     }
 
-    fun getPreference() : SharedPreferences{
+    fun getPreferences() : SharedPreferences{
         return PreferenceManager.getDefaultSharedPreferences(this)
     }
 
     fun setToken(token:String){
-        getPreference().edit().putString("PREFERENCES_TOKEN",token).apply()
+        getPreferences().edit().putString("PREFERENCES_TOKEN",token).apply()
         HttpClient.getInstance().buildRetrofitClient(token)
     }
     fun getToken():String?{
-        return getPreference().getString("PREFERENCE_TOKEN",null)
+        return getPreferences().getString("PREFERENCES_TOKEN",null)
     }
 
     fun setUser(user:String){
-        getPreference().edit().putString("PREFERENCE_USER",user).apply()
+        getPreferences().edit().putString("PREFERENCES_USER",user).apply()
         HttpClient.getInstance().buildRetrofitClient(user)
     }
     fun getUser():String?{
-        return getPreference().getString("PREFERENCE_USER",null)
+        return getPreferences().getString("PREFERENCES_USER",null)
     }
 }

@@ -16,7 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email Address" />
+
     <EditText
+        android:id="@+id/etEmail"
         style="@style/EditText.PoppinsNormal14sp8D92A3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password" />
+
     <EditText
+        android:id="@+id/etPassword"
         android:inputType="textPassword"
         style="@style/EditText.PoppinsNormal14sp8D92A3"
         android:layout_marginTop="6dp"
