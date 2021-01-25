@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.google.gson.Gson
+import com.wahyukurnia.foodmarketkotlin.FoodMarket
 import com.wahyukurnia.foodmarketkotlin.R
 import com.wahyukurnia.foodmarketkotlin.model.response.login.LoginResponse
 import com.wahyukurnia.foodmarketkotlin.ui.MainActivity
@@ -31,6 +33,14 @@ class SigninFragment : Fragment(),SigninContract.View {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         presenter = SigninPresenter(this)
+
+        if(!FoodMarket.getApp().getToken().isNullOrEmpty()){
+            val home = Intent(activity,MainActivity::class.java)
+            startActivity(home)
+            activity?.finish()
+        }
+
+        initDummy()
         initView()
 
         btnSignup.setOnClickListener{
@@ -39,14 +49,36 @@ class SigninFragment : Fragment(),SigninContract.View {
             startActivity(signup)
         }
         btnSignin.setOnClickListener {
-            presenter.submitLogin("wahyukurnia321123@gmail.com","wahyukurnia")
+            var email = etEmail.text.toString()
+            var password = etPassword.text.toString()
+
+            if(email.isNullOrEmpty()){
+                etEmail.error = "Silahkan masukan email Anda"
+                etEmail.requestFocus()
+            }else if (password.isNullOrEmpty()){
+                etPassword.error = "Silahkan masukan password Anda"
+                etPassword.requestFocus()
+            }else{
+                presenter.submitLogin(email,password)
+            }
         }
     }
 
     override fun onLoginSuccess(loginResponse: LoginResponse) {
+        FoodMarket.getApp().setToken(loginResponse.access_token)
+
+        val gson = Gson()
+        val json = gson.toJson(loginResponse.user)
+        FoodMarket.getApp().setUser(json)
+
         val home = Intent(activity,MainActivity::class.java)
         startActivity(home)
         activity?.finish()
+    }
+
+    private fun initDummy(){
+        etEmail.setText("wahyukurnia321123@gmail.com")
+        etPassword.setText("wahyukurnia")
     }
 
     override fun onLoginFailed(message: String) {
